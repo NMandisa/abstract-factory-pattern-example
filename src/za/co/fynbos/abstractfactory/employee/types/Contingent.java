@@ -3,7 +3,7 @@
  */
 package za.co.fynbos.abstractfactory.employee.types;
 
-import za.co.fynbos.abstractfactory.employee.Employee;
+import za.co.fynbos.entity.Employee;
 
 /**
  * @author Noxolo.Mkhungo
@@ -13,7 +13,6 @@ public class Contingent extends Employee {
 	
 	private String name;
 	private String surname;
-	private Long taxNumber;
 	private String designation;
 	
 	public Contingent(){super();}  //default constructor
@@ -22,11 +21,10 @@ public class Contingent extends Employee {
 		this.name=name;
 		this.surname=surname;
 	} 
-	public Contingent(String name,String surname,Long taxNumber,String designation)//constructor taking 4 arg constructor
+	public Contingent(String name,String surname,String designation)//constructor taking 4 arg constructor
 	{
 		this.name=name;
 		this.surname=surname;
-		this.taxNumber=taxNumber;
 		this.designation=designation;
 	} 
 	
@@ -45,10 +43,6 @@ public class Contingent extends Employee {
 		return this.surname;
 	}
 
-	@Override
-	public long getTaxNumber() {
-		return this.taxNumber;
-	}
 
 	@Override
 	public String getDesignation() {

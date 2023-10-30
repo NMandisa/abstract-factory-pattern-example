@@ -1,8 +1,8 @@
 package za.co.fynbos.abstractfactory.employee.factories;
 
 import za.co.fynbos.abstractfactory.EmployeeAbstractFactory;
-import za.co.fynbos.abstractfactory.employee.Employee;
 import za.co.fynbos.abstractfactory.employee.types.Intern;
+import za.co.fynbos.entity.Employee;
 
 public class InternFactory implements EmployeeAbstractFactory{
 	
