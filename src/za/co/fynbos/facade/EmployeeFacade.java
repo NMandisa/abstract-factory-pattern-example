@@ -24,7 +24,7 @@ public class EmployeeFacade {
 		  case INTERN:
 			    // code block
 			    break;
-		  case lEASED_EMPLOYEE:
+		  case LEASED_EMPLOYEE:
 			    // code block
 			    break;
 		  case PART_TIME:
