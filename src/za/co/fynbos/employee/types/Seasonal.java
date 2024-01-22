@@ -1,17 +1,13 @@
-package za.co.fynbos.abstractfactory.employee.types;
+package za.co.fynbos.employee.types;
 
+import za.co.fynbos.employee.EmployeeAbstractFactory;
 import za.co.fynbos.entity.Employee;
 
 /**
  * @author Noxolo.Mkhungo
  *
  */
-public class Seasonal extends Employee{
-	
-	private String name;
-	private String surname;
-	private String designation;
-
+public class Seasonal extends Employee implements EmployeeAbstractFactory {
 
 	public Seasonal(){super();}  //default constructor
 	public Seasonal(String name,String surname) //constructor taking 2 arg 
@@ -40,5 +36,10 @@ public class Seasonal extends Employee{
 	@Override
 	public String getDesignation() {
 		return this.designation;
+	}
+
+	@Override
+	public Employee onBoard() {
+		return new Seasonal(name,surname,designation);
 	}
 }

@@ -3,7 +3,7 @@
  */
 package za.co.fynbos.facade;
 
-import za.co.fynbos.abstractfactory.employee.enums.EmployeeType;
+import za.co.fynbos.employee.enums.EmployeeType;
 
 /**
  * @author Noxolo.Mkhungo

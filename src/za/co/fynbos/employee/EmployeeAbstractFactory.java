@@ -1,7 +1,7 @@
 /**
  * 
  */
-package za.co.fynbos.abstractfactory;
+package za.co.fynbos.employee;
 
 import za.co.fynbos.entity.Employee;
 

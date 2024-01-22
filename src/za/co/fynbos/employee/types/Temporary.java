@@ -1,20 +1,16 @@
 /**
  * 
  */
-package za.co.fynbos.abstractfactory.employee.types;
+package za.co.fynbos.employee.types;
 
+import za.co.fynbos.employee.EmployeeAbstractFactory;
 import za.co.fynbos.entity.Employee;
 
 /**
  * @author Noxolo.Mkhungo
  *
  */
-public class Temporary extends Employee {
-
-	private String name;
-	private String surname;
-	private String designation;
-
+public class Temporary extends Employee implements EmployeeAbstractFactory {
 	public Temporary() {
 		super();
 	} // default constructor
@@ -47,4 +43,8 @@ public class Temporary extends Employee {
 		return this.designation;
 	}
 
+	@Override
+	public Employee onBoard() {
+		return new Temporary(name,surname,designation);
+	}
 }

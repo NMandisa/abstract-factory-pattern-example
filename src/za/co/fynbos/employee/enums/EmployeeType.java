@@ -1,7 +1,7 @@
 /**
  * 
  */
-package za.co.fynbos.abstractfactory.employee.enums;
+package za.co.fynbos.employee.enums;
 
 /**
  * @author Noxolo.Mkhungo

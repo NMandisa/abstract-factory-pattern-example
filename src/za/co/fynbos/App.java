@@ -1,18 +1,14 @@
 package za.co.fynbos;
 
-import za.co.fynbos.abstractfactory.EmployeeAbstractFactory;
-import za.co.fynbos.abstractfactory.employee.factories.EmployeeFactory;
-import za.co.fynbos.abstractfactory.employee.factories.FixedTermFactory;
-import za.co.fynbos.entity.Employee;
+import za.co.fynbos.employee.types.FixedTerm;
 
 public class App {
 	
 	public static void main(String[]arg) {	
 		
-		FixedTermFactory fixedtermEmployee =  new FixedTermFactory("Nox","Mk","Sys Eng");
-		Employee employee = new EmployeeFactory().getEmployee(fixedtermEmployee.onBoard());
+		FixedTerm fixedtermEmployee =  new FixedTerm("Nox","Mk","Sys Eng");
 		//not working yet still needs fixing
-		System.out.println(employee.toString());
+		System.out.println(fixedtermEmployee.toString());
 	}
 
 }

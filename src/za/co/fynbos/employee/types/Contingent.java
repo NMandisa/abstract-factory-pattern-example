@@ -1,19 +1,16 @@
 /**
  * 
  */
-package za.co.fynbos.abstractfactory.employee.types;
+package za.co.fynbos.employee.types;
 
+import za.co.fynbos.employee.EmployeeAbstractFactory;
 import za.co.fynbos.entity.Employee;
 
 /**
  * @author Noxolo.Mkhungo
  *
  */
-public class Contingent extends Employee {
-	
-	private String name;
-	private String surname;
-	private String designation;
+public class Contingent extends Employee implements EmployeeAbstractFactory {
 	
 	public Contingent(){super();}  //default constructor
 	public Contingent(String name,String surname) //constructor taking 2 arg constructor
@@ -26,12 +23,7 @@ public class Contingent extends Employee {
 		this.name=name;
 		this.surname=surname;
 		this.designation=designation;
-	} 
-	
-	
-	
-	
-	
+	}
 
 	@Override
 	public String getName() {
@@ -49,4 +41,8 @@ public class Contingent extends Employee {
 		return this.designation;
 	}
 
+	@Override
+	public Employee onBoard() {
+		return new Contingent(name,surname,designation);
+	}
 }

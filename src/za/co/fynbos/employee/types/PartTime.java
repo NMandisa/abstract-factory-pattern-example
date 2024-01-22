@@ -1,16 +1,13 @@
-package za.co.fynbos.abstractfactory.employee.types;
+package za.co.fynbos.employee.types;
 
+import za.co.fynbos.employee.EmployeeAbstractFactory;
 import za.co.fynbos.entity.Employee;
 
 /**
  * @author Noxolo.Mkhungo
  *
  */
-public class PartTime extends Employee {
-
-	private String name;
-	private String surname;
-	private String designation;
+public class PartTime extends Employee implements EmployeeAbstractFactory {
 
 	public PartTime() {
 		super();
@@ -44,4 +41,8 @@ public class PartTime extends Employee {
 		return this.designation;
 	}
 
+	@Override
+	public Employee onBoard() {
+		return new PartTime(name,surname,designation);
+	}
 }
